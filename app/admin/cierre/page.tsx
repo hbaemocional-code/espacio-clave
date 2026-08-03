@@ -97,8 +97,8 @@ export default function CierrePage() {
         </p>
       )}
 
-      <div className="ec-glass rounded-xl3 shadow-glass overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="ec-glass rounded-xl3 shadow-glass overflow-x-auto">
+        <table className="w-full min-w-[720px] text-sm">
           <thead className="bg-white/30 text-tinta-faint text-xs uppercase tracking-wide">
             <tr>
               <th className="text-left px-4 py-2">Profesional</th>
