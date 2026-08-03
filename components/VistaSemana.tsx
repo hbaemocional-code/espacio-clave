@@ -22,8 +22,8 @@ export default function VistaSemana({ fechaBase, turnos, disciplinas, onSlotVaci
   }
 
   return (
-    <div className="ec-glass rounded-xl3 shadow-glass overflow-hidden">
-      <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, 1fr)" }}>
+    <div className="ec-glass rounded-xl3 shadow-glass overflow-x-auto">
+      <div className="grid" style={{ gridTemplateColumns: "70px repeat(6, minmax(150px, 1fr))" }}>
         <div className="border-b border-white/50 bg-white/30" />
         {dias.map((d) => (
           <div
