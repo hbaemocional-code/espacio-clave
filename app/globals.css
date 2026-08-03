@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --crema: #fcfaf8;
+  --tinta: #262626;
+}
+
+html,
+body {
+  background-color: var(--crema);
+  color: var(--tinta);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Manrope", sans-serif;
+}
+
+::selection {
+  background: #9c6ade;
+  color: white;
+}
+
+/* ---------- Espacio Design System: primitivas de vidrio ---------- */
+
+.ec-glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.ec-glass-strong {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.ec-glass-dark {
+  background: rgba(23, 23, 23, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Fondo con formas orgánicas — muy sutil, nunca protagonista */
+.ec-fondo-organico {
+  position: relative;
+  isolation: isolate;
+}
+
+.ec-fondo-organico::before,
+.ec-fondo-organico::after {
+  content: "";
+  position: fixed;
+  border-radius: 999px;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.ec-fondo-organico::before {
+  width: 480px;
+  height: 480px;
+  top: -160px;
+  right: -120px;
+  background: radial-gradient(circle, #f46b6b 0%, transparent 70%);
+}
+
+.ec-fondo-organico::after {
+  width: 560px;
+  height: 560px;
+  bottom: -220px;
+  left: -160px;
+  background: radial-gradient(circle, #9c6ade 0%, transparent 70%);
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(38, 38, 38, 0.15);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
